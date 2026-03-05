@@ -1,9 +1,9 @@
 import { useRef, useEffect, useState } from "react";
 
 export default function Home() {
-  const [playing, setPlaying] = useState(false)
+  const [playing, setPlaying] = useState(false);
   const [volume, setVolume] = useState(0.5);
-  cont audioRef = useRef(null)
+  const audioRef = useRef(null);
 
   const playMusic = () => {
     audioRef.current.play();
