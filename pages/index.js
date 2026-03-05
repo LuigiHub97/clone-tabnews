@@ -32,12 +32,10 @@ export default function Home() {
         <button onClick={playMusic} style={styles.button}>
           ▶️ Tocar Música
         </button>
-        <button onClick={pauseMusic} style={styles.button}>
-          ⏸️ Pausar Música
-        </button>
+
       </div>
 
-      <audio ref={audioRef} src="/musica.mp3" />
+      <audio ref={audioRef} src="/bk planos.mp3" />
 
     </div>
   );
