@@ -17,12 +17,12 @@ export default function Home() {
 
       <div style={styles.photosContainer}>
         <img
-          src="/foto 1.jpeg"
+          src="/.jpeg"
           alt="nossa foto 1"
           style={styles.photo}
         />
         <img
-          src="/foto 2 nois.jpeg"
+          src="/.jpeg"
           alt="nossa foto 2"
           style={styles.photo}
         />
