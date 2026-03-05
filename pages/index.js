@@ -1,7 +1,9 @@
-import { useRef } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function Home() {
-  const audioRef = useRef(null);
+  const [playing, setPlaying] = useState(false)
+  const [volume, setVolume] = useState(0.5);
+  cont audioRef = useRef(null)
 
   const playMusic = () => {
     audioRef.current.play();
@@ -29,9 +31,34 @@ export default function Home() {
       </div>
 
       <div style={styles.buttons}>
-        <button onClick={playMusic} style={styles.button}>
-          ▶️ Tocar Música
-        </button>
+        <button onClick={playMusic}>
+  ▶️ Tocar Música
+</button>
+        <button
+  onClick={() => {
+    if (playing) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    setPlaying(!playing);
+  }}
+  style={styles.button}
+>
+  {playing ? "⏸ Pausar" : "▶ Tocar"}
+</button>
+<input
+  type="range"
+  min="0"
+  max="1"
+  step="0.01"
+  value={volume}
+  onChange={(e) => {
+    setVolume(e.target.value);
+    audioRef.current.volume = e.target.value;
+  }}
+  style={{ marginTop: "15px", width: "200px" }}
+/>
 
       </div>
 
