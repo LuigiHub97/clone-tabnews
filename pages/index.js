@@ -31,9 +31,6 @@ export default function Home() {
       </div>
 
       <div style={styles.buttons}>
-        <button onClick={playMusic}>
-  ▶️ Tocar Música
-</button>
         <button
   onClick={() => {
     if (playing) {
